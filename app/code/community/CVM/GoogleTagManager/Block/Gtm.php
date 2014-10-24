@@ -77,9 +77,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             foreach ($cats as $category_id) {
                 $_cat        = Mage::getModel('catalog/category')->load($category_id);
                 $_use_cats[] = "'" . $_cat->getName() . "'";
-	}
+	        }
 
-	/**
+	        /**
              * Get children products (all associated children products data)
              *
              */
@@ -173,7 +173,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         $remark_tags .= "<script> dataLayer = [{ google_tag_params: window.google_tag_params }]; </script>";
         return $remark_tags;
     }
-
 
     /**
 	 * Get transaction data for use in the data layer.
